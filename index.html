@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Skokie Public Library: WiFi Prize</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+    <style>
+        html,body{width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;}
+        body{font: 300 20px/1.4 'Open Sans Condensed', sans-serif; background-color: #1F73B2 ; color: #fff;}
+        h1,h2,h3,h4,h5,h6{line-height: 1.2;}
+        h1{letter-spacing: -1px; text-transform: uppercase; }
+        h1,p{margin: 0;}
+    .container{margin: 20% auto 0 auto; text-align: center;}
+        .secret{display: inline-block; margin-top: .5em; padding: .1em 1em; background-color: #fff; font-family: 'Special Elite'; font-size: 48px; color: #1F73B2;}
+        .logo{position: absolute; bottom: 10%; left: 0; right: 0; margin-top: 10%;}
+        @media screen and (max-width: 1024){
+            .content{width: 70%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Thanks for taking our WiFi survey!</h1>
+        <p>Use this secret word to claim your treat from the Tech Help Desk on the 2nd floor.</p>
+        <p class="secret" id="secret">The word</p>
+        <div class="logo">
+            <img src="logo-white.png">
+        </div>
+    </div>
+    <script>
+        window.onload = function(){
+            var secrets, secret, target, today, prize_date;
+
+            today = new Date();
+            prize_date = today.getDate();
+
+            secrets = ['It','was','the','best','of','times','it','was','the','worst','of','times','it','was','the','age','of','wisdom','it','was','the','age','of','foolishness','it','was','the','epoch','of','belief','it','was','the','epoch','of','incredulity','it','was','the','season','of','Light','it','was','the','season','of','Darkness','it','was','the','spring','of','hope','it','was','the','winter','of','despair','we','had','everything','before','us','we','had','nothing','before','us','we','were','all','going','direct','to','Heaven','we','were','all','going','direct','the','other','way','in','short','the','period','was','so','far','like','the','present','period','','that','some','ofits','noisiest','authorities','insisted','on','its','being','received','','for','good','or','forevil','','in','the','superlative','degree','of','comparison','only.'];
+            secret = secrets[prize_date];
+
+            target = document.getElementById('secret');
+            target.innerHTML = secret;
+
+        }
+    </script>
+    <!--don't forget Google Analytics-->
+</body>
