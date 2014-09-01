@@ -11,7 +11,7 @@
         h1,h2,h3,h4,h5,h6{line-height: 1.2;}
         h1{letter-spacing: -1px; text-transform: uppercase; }
         h1,p{margin: 0;}
-    .container{margin: 15% auto 0 auto; text-align: center;}
+    .container{margin: 10% auto 0 auto; text-align: center;}
         .secret{display: inline-block; margin-top: .5em; padding: .1em 1em; background-color: #fff; font-family: 'Special Elite'; font-size: 48px; color: #1F73B2;}
         .logo{position: absolute; bottom: 10%; left: 0; right: 0; margin-top: 10%;}
         @media screen and (max-width: 1024){
@@ -33,7 +33,7 @@
             var secrets, secret, target, today, prize_date;
 
             today = new Date();
-            prize_date = today.getDate() - 1;
+            prize_date = today.getDate() - 2;
 
             secrets = ["A","mushroom","walks","up","knocks","on","his","date's","door.","She","answers","and","tells","him","she","has","changed","her","mind.","He","is","surprised","and","asks:","Why?","I","am","a","fungi."];
             secret = secrets[prize_date];
@@ -41,7 +41,7 @@
             target = document.getElementById('secret');
             target.innerHTML = secret;
 
-        }
+        };
     </script>
     <!--don't forget Google Analytics-->
     <script type="text/javascript">
