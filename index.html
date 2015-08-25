@@ -3,55 +3,128 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Skokie Public Library: WiFi Prize</title>
+    <title>WiFi Prize | Skokie Public Library</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <style>
-        html,body{width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;}
-        body{font: 300 20px/1.4 'Open Sans Condensed', sans-serif; background-color: #1F73B2 ; color: #fff;}
-        h1,h2,h3,h4,h5,h6{line-height: 1.2;}
-        h1{letter-spacing: -1px; text-transform: uppercase; }
-        h1,p{margin: 0;}
-        a{color: inherit; text-decoration: none;}
-        .container{margin: 10% auto 0 auto; text-align: center;}
-        .secret{display: inline-block; margin-top: .5em; padding: .1em 1em; background-color: #fff; font-family: 'Special Elite'; font-size: 48px; color: #1F73B2;}
-        .logo{position: absolute; bottom: 10%; left: 0; right: 0; margin-top: 10%;}
-        .go-back{position: relative; top: -1em; font-size: 16px;}
-        @media screen and (max-width: 1024){
-            .content{width: 70%; }
-        }
+      html,body{width: 100%; height: 100%; margin: 0; padding: 0;}
+      body{font: 400 16px/1.4 'Lato', sans-serif; color: #333;}
+      h1,h2,h3,h4,h5,h6{font-weight: 400; line-height: 1.2;}
+      h1{text-transform: uppercase; }
+      h1,p{margin: 0;}
+      header h1{color: #E0C300;}
+      a{color: inherit; text-decoration: none;}
+      header{margin-top: 2rem;}
+      .container{max-width: 800px; margin: 0 auto; padding: 1rem; text-align: center;}
+      .secret{margin-top: 1rem; text-align: left;}
+      .word{display: inline-block; height: 3rem; margin-bottom: 1rem; padding: 0 1rem; line-height: 3rem; border: 1px solid #E0C300;}
+      .today{background: #E0C300; border-color: #E0C300;}
+      .rick{display: none;}
+      footer{margin: 3rem 0 2rem;}
+      .logo > svg{height: 124px; fill: #E0C300;}
     </style>
 </head>
 <body>
+  <header>
     <div class="container">
-        <h1>Thanks for taking our survey!</h1>
-        <p>Use this secret word to claim your treat from the Tech Help Desk on the 2nd floor.</p>
-        <p class="secret" id="secret">The word</p>
-        <div class="logo">
-            <a href="/">
-                <img src="logo-white.png">
-                <p class="go-back">&larr; Go to the library's website</p>
-            </a>
-        </div>
+      <h1>Thanks for taking our survey</h1>
     </div>
+  </header>
+  <main>
+    <div class="container">
+        <p>Use today's secret word to claim your treat from the Tech Help Desk on the 2nd floor.</p>
+        <p class="secret">
+          <span class="word" id="word-1">&nbsp;</span>
+          <span class="word" id="word-2">&nbsp;</span>
+          <span class="word" id="word-3">&nbsp;</span>
+          <span class="word" id="word-4">&nbsp;</span>
+          <span class="word" id="word-5">&nbsp;</span>
+          <span class="word" id="word-6">&nbsp;</span>
+          <span class="word" id="word-7">&nbsp;</span>
+          <span class="word" id="word-8">&nbsp;</span>
+          <span class="word" id="word-9">&nbsp;</span>
+          <span class="word" id="word-10">&nbsp;</span>
+          <span class="word" id="word-11">&nbsp;</span>
+          <span class="word" id="word-12">&nbsp;</span>
+          <span class="word" id="word-13">&nbsp;</span>
+          <span class="word" id="word-14">&nbsp;</span>
+          <span class="word" id="word-15">&nbsp;</span>
+          <span class="word" id="word-16">&nbsp;</span>
+          <span class="word" id="word-17">&nbsp;</span>
+          <span class="word" id="word-18">&nbsp;</span>
+          <span class="word" id="word-19">&nbsp;</span>
+          <span class="word" id="word-20">&nbsp;</span>
+          <span class="word" id="word-21">&nbsp;</span>
+          <span class="word" id="word-22">&nbsp;</span>
+          <span class="word" id="word-23">&nbsp;</span>
+          <span class="word" id="word-24">&nbsp;</span>
+          <span class="word" id="word-25">&nbsp;</span>
+          <span class="word" id="word-26">&nbsp;</span>
+          <span class="word" id="word-27">&nbsp;</span>
+          <span class="word" id="word-28">&nbsp;</span>
+          <span class="word" id="word-29">&nbsp;</span>
+        </p>
+        <div class="rick">
+          <a href="https://youtu.be/dQw4w9WgXcQ?t=43s">
+            <img src="img/rickroll.gif">
+          </a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <a href="/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="105.2px" height="157.8px" viewBox="55.4 29.1 105.2 157.8" style="enable-background:new 55.4 29.1 105.2 157.8;" xml:space="preserve"><g><path class="st0" d="M117.8 186.9L92 175.6L55 77.7l73.1-48.6l-0.4 39.2l32.5-21.9L145 169.5l-21.5-9.4l1-86l-21.7 14.6 L117.8 186.9z M94.4 173.3l19.5 8.5L99.4 87.2l25.1-16.9l0.4-35.5l-66.1 44L94.4 173.3z M126.6 158.1l15.8 6.9l13.8-112.2L127.6 72 L126.6 158.1z"/></g></svg>
+        </a>
+      </div>
+    </footer>
     <script>
-        window.onload = function(){
-            var secrets, secret, target, today, prize_date;
+        (function(){
+            var today, prize_date;
 
-            today = new Date();
-            prize_date = today.getDate() - 2;
+            if (window.location.search.length > 0){
+              prize_date = window.location.search.replace('?', '');
+            }
+            else{
+              today = new Date();
+              prize_date = today.getDate();
+            }
 
-            secrets = ["A","mushroom","walks","up","knocks","on","his","date's","door.","She","answers","and","tells","him","she","has","changed","her","mind.","He","is","surprised","and","asks:","Why?","I","am","a","fungi."];
-            secret = secrets[prize_date];
+            display_secret(prize_date);
 
-            target = document.getElementById('secret');
-            target.innerHTML = secret;
+            function display_secret(prize_date){
+              var words, word, secrets, secret, target, today, prize_date;
 
-        };
+              words = ["The","English","singer","and","songwriter","Rick","Astley","will","let","you","borrow","any","title","from","his","personal","collection","of","Pixar","movies,","except","for","one.","He's","never","gonna","give","you","Up."];
+
+              console.log(words.length)
+
+              for (i = 0; i < words.length; i++){
+                word = document.getElementById('word-' + (i + 1));
+
+                console.log(i, prize_date);
+
+                if (i <= (prize_date - 1)){
+                  word.innerText = words[i];
+                }
+                else{
+                  word.style.width = words[i].length + '%';
+                }
+
+                if (i == (prize_date -1)){
+                  word.classList.add('today');
+                }
+
+                if (prize_date == words.length){
+                  document.getElementsByClassName('rick')[0].style.display = "block";
+                }
+              }
+            }
+
+        })();
     </script>
     <!--don't forget Google Analytics-->
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-22302162-6']);
       _gaq.push(['_trackPageview']);
@@ -61,6 +134,6 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-    </script>
+    </script>-->
 
 </body>
