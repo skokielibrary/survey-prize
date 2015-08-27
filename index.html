@@ -17,7 +17,9 @@
       header{margin-top: 2rem;}
       .container{max-width: 800px; margin: 0 auto; padding: 1rem; text-align: center;}
       .secret{margin-top: 1rem; text-align: left;}
-      .word{display: inline-block; height: 3rem; margin-bottom: 1rem; padding: 0 1rem; line-height: 3rem; border: 1px solid #E0C300;}
+      .word{position: relative; display: inline-block; height: 3rem; margin-bottom: 1rem; padding: 0 1rem; line-height: 3rem; border: 1px solid #E0C300;}
+      .hide{visibility: hidden;}
+      .show{visibility: visible;}
       .today{background: #E0C300; border-color: #E0C300;}
       .rick{display: none;}
       footer{margin: 3rem 0 2rem;}
@@ -34,39 +36,39 @@
     <div class="container">
         <p>Use today's secret word to claim your treat from the Tech Help Desk on the 2nd floor.</p>
         <p class="secret">
-          <span class="word" id="word-1">&nbsp;</span>
-          <span class="word" id="word-2">&nbsp;</span>
-          <span class="word" id="word-3">&nbsp;</span>
-          <span class="word" id="word-4">&nbsp;</span>
-          <span class="word" id="word-5">&nbsp;</span>
-          <span class="word" id="word-6">&nbsp;</span>
-          <span class="word" id="word-7">&nbsp;</span>
-          <span class="word" id="word-8">&nbsp;</span>
-          <span class="word" id="word-9">&nbsp;</span>
-          <span class="word" id="word-10">&nbsp;</span>
-          <span class="word" id="word-11">&nbsp;</span>
-          <span class="word" id="word-12">&nbsp;</span>
-          <span class="word" id="word-13">&nbsp;</span>
-          <span class="word" id="word-14">&nbsp;</span>
-          <span class="word" id="word-15">&nbsp;</span>
-          <span class="word" id="word-16">&nbsp;</span>
-          <span class="word" id="word-17">&nbsp;</span>
-          <span class="word" id="word-18">&nbsp;</span>
-          <span class="word" id="word-19">&nbsp;</span>
-          <span class="word" id="word-20">&nbsp;</span>
-          <span class="word" id="word-21">&nbsp;</span>
-          <span class="word" id="word-22">&nbsp;</span>
-          <span class="word" id="word-23">&nbsp;</span>
-          <span class="word" id="word-24">&nbsp;</span>
-          <span class="word" id="word-25">&nbsp;</span>
-          <span class="word" id="word-26">&nbsp;</span>
-          <span class="word" id="word-27">&nbsp;</span>
-          <span class="word" id="word-28">&nbsp;</span>
-          <span class="word" id="word-29">&nbsp;</span>
+          <span class="word" id="word-1"><span class="hide">The</span></span>
+          <span class="word" id="word-2"><span class="hide">English</span></span>
+          <span class="word" id="word-3"><span class="hide">singer</span></span>
+          <span class="word" id="word-4"><span class="hide">and</span></span>
+          <span class="word" id="word-5"><span class="hide">songwriter</span></span>
+          <span class="word" id="word-6"><span class="hide">Rick</span></span>
+          <span class="word" id="word-7"><span class="hide">Astley</span></span>
+          <span class="word" id="word-8"><span class="hide">will</span></span>
+          <span class="word" id="word-9"><span class="hide">let</span></span>
+          <span class="word" id="word-10"><span class="hide">you</span></span>
+          <span class="word" id="word-11"><span class="hide">borrow</span></span>
+          <span class="word" id="word-12"><span class="hide">any</span></span>
+          <span class="word" id="word-13"><span class="hide">title</span></span>
+          <span class="word" id="word-14"><span class="hide">from</span></span>
+          <span class="word" id="word-15"><span class="hide">his</span></span>
+          <span class="word" id="word-16"><span class="hide">personal</span></span>
+          <span class="word" id="word-17"><span class="hide">collection</span></span>
+          <span class="word" id="word-18"><span class="hide">of</span></span>
+          <span class="word" id="word-19"><span class="hide">Pixar</span></span>
+          <span class="word" id="word-20"><span class="hide">movies,</span></span>
+          <span class="word" id="word-21"><span class="hide">except</span></span>
+          <span class="word" id="word-22"><span class="hide">for</span></span>
+          <span class="word" id="word-23"><span class="hide">one.</span></span>
+          <span class="word" id="word-24"><span class="hide">He's</span></span>
+          <span class="word" id="word-25"><span class="hide">never</span></span>
+          <span class="word" id="word-26"><span class="hide">gonna</span></span>
+          <span class="word" id="word-27"><span class="hide">give</span></span>
+          <span class="word" id="word-28"><span class="hide">you</span></span>
+          <span class="word" id="word-29"><span class="hide">Up.</span></span>
         </p>
         <div class="rick">
           <a href="https://youtu.be/dQw4w9WgXcQ?t=43s">
-            <img src="img/rickroll.gif">
+            <spanmg src="img/rickroll.gif">
           </a>
         </div>
       </div>
@@ -82,22 +84,15 @@
         (function(){
             var today, prize_date;
 
-            if (window.location.search.length > 0){
-              prize_date = window.location.search.replace('?', '');
-            }
-            else{
-              today = new Date();
-              prize_date = today.getDate();
-            }
+            today = new Date();
+            prize_date = today.getDate();
 
             display_secret(prize_date);
 
             function display_secret(prize_date){
               var words, word, secrets, secret, target, today, prize_date;
 
-              words = ["The","English","singer","and","songwriter","Rick","Astley","will","let","you","borrow","any","title","from","his","personal","collection","of","Pixar","movies,","except","for","one.","He's","never","gonna","give","you","Up."];
-
-              console.log(words.length)
+              words = document.getElementsByClassName('word');
 
               for (i = 0; i < words.length; i++){
                 word = document.getElementById('word-' + (i + 1));
@@ -105,10 +100,8 @@
                 console.log(i, prize_date);
 
                 if (i <= (prize_date - 1)){
-                  word.innerText = words[i];
-                }
-                else{
-                  word.style.width = words[i].length + '%';
+                  word.getElementsByTagName('span')[0].classList.remove('hide');
+                  word.getElementsByTagName('span')[0].classList.add('show');
                 }
 
                 if (i == (prize_date -1)){
