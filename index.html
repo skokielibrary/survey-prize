@@ -97,8 +97,6 @@
               for (i = 0; i < words.length; i++){
                 word = document.getElementById('word-' + (i + 1));
 
-                console.log(i, prize_date);
-
                 if (i <= (prize_date - 1)){
                   word.getElementsByTagName('span')[0].classList.remove('hide');
                   word.getElementsByTagName('span')[0].classList.add('show');
@@ -117,7 +115,7 @@
         })();
     </script>
     <!--don't forget Google Analytics-->
-    <!--<script type="text/javascript">
+    <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-22302162-6']);
       _gaq.push(['_trackPageview']);
@@ -127,6 +125,6 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-    </script>-->
+    </script>
 
 </body>
